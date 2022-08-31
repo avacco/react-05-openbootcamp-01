@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Saludo from './componentes/clase/saludo';
-import SaludoFuncional from './componentes/funcional/saludoFuncional';
+import Ejemplo1 from './hooks/ejemplo1';
+import Ejemplo2 from './hooks/ejemplo2';
+import MiComponenteConContexto from './hooks/ejemplo3';
+import Ejemplo4 from './hooks/ejemplo4';
+// import TasklistComponent from './components/container/tasklist';
 
 
 function App() {
@@ -9,9 +12,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludo nombre="Andres"/>
-        <SaludoFuncional nombre="Andres"/>
+        
+        {/* <TasklistComponent/> */}
+        {/* <Ejemplo1/> */}
+        {/* <Ejemplo2/> */}
+        {/* <MiComponenteConContexto/> */}
+        <Ejemplo4 nombre='Andres'>
+        {/* Todo lo que este dentro sera tratado como props.children */}
+
+        <h3> Contenido de props.children </h3>
+
+        </Ejemplo4>
       </header>
+
     </div>
   );
 }
